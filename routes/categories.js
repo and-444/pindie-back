@@ -2,8 +2,8 @@ const categoriesRouter = require("express").Router();
 
 const {
   findAllCategories,
-  findCategoryById,
   createCategory,
+  findCategoryById,
   updateCategory,
   deleteCategory,
   checkIsCategoryExists,

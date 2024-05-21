@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const userModel = require("./user");
 const categoryModel = require("./category");
+const userModel = require("./user");
 
 const gameSchema = new mongoose.Schema({
   title: {
@@ -36,6 +36,7 @@ const gameSchema = new mongoose.Schema({
     },
   ],
 });
+
 gameSchema.statics.findGameByCategory = function (category) {
   return this.find({})
     .populate({

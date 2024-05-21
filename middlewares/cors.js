@@ -1,4 +1,9 @@
-const allowedCors = ["https://and-frontend.nomoredomainswork.ru"];
+const allowedCors = [
+  "https://practicum.yandex.ru",
+  "https://students-projects.ru",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
 
 function cors(req, res, next) {
   const { origin } = req.headers;
@@ -11,6 +16,7 @@ function cors(req, res, next) {
     "Access-Control-Allow-Headers",
     "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization"
   );
+
   next();
 }
 
